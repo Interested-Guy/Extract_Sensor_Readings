@@ -1,6 +1,6 @@
 # Extract_Sensor_Readings
 
-## A demonstration of the app is available on https://roger123.pythonanywhere.com/graph/ . To obtain the demo first install the app on an android phone with a light sensor. Then open the above url. To obtain the graph, open the app. The graph should appear.
+A demonstration of the app used to be available on https://roger123.pythonanywhere.com/graph/ . To obtain the demo first install the app on an android phone with a light sensor. Then open the above url. To obtain the graph, open the app. The graph should appear.
 
 ## Final Implementation: The previous implementation uses two separate servers, the flask and the websocket, and also involves making calls to weboscket from flask which makes it computationally more expensive. Since the task is to just pass the phone sensor readings from the server to the client for visualization the Server Sent Events can be used. This simply eliminated the websocket server and hence the need for a call to it. 
 Final Implementation: First we run a websocket server. Then we run a flask server. We then open the flask app url which gives a page to visualize phone sensor readings through a graph. This page opens a websocket connection with the websocket server. We then run the android application. The app sends the sensor readings to the flask server. The flask server then uses websocket connection to send those readings to the websocket server. The websocket server then sends those readings to the html page. These readings are finally displayed in the graph. All files related to this implementation can be found in the final_implementation folder. An image ...210911.jpg has been included in the repository to observe the results. In order to simulate the android phone, webstest.py can be run. 
@@ -19,4 +19,12 @@ I used a combination of these projects along with the knowledge of socket progra
 2. https://www.geeksforgeeks.org/how-to-communicate-with-pc-using-android/
 
 3. https://learn.sparkfun.com/tutorials/graph-sensor-data-with-python-and-matplotlib/update-a-graph-in-real-time
+
+## Useful Apps
+
+https://github.com/Foxpace/SensorBox?tab=readme-ov-file
+
+Play Store: sensor toolbox
+
+Morever, ChatGPT can generate simple Android Apps nowadays.
 
